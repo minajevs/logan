@@ -472,4 +472,11 @@ var content = [
         type: 'streamable',
         url: 'https://streamable.com/uq50',
     },
+        {
+        id: 78,
+        title: 'Прожектор!',
+        type: 'streamable',
+        url: 'https://streamable.com/ntvq',
+    },
+
 ];
