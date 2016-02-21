@@ -22,9 +22,9 @@ function addItemToPage(item){
 
 function generatePictureItem(item){
     var li = [
-      '<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">',
+        '<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">',
         '<img class="img-responsive" src="',item.url,'" data-type="',item.type,'">',
-      '</li>'
+        '</li>'
     ];
     return li.join('');
 }
@@ -34,7 +34,8 @@ function generateStreamableItem(item){
     var preview = 'http://cdn.streamable.com/image/' + link + '_first.jpg';
     var li = [
         '<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">',
-            '<img class="img-responsive" src="',preview,'" data-type="',item.type,'" data-link="',link,'">',
+        '<img class="img-responsive" src="',preview,'" data-type="',item.type,'" data-link="',link,'">',
+        '<h4>',item.title,'</h4>',
         '</li>'
     ];
     return li.join('');
