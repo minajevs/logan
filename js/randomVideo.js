@@ -6,19 +6,13 @@ var item = content[getRandomInt(0,content.length)];
 switch (item.type){
     case 'youtube':
         var link = item.url.replace('/','').substr(item.url.replace('/','').length - 11);
-        $('#video').attr('src', 'http://www.youtube.com/embed/' + link + '?autoplay=1');
+        $('#video').attr('src', 'http://www.youtube.com/embed/' + link + '?autoplay=1&showinfo=0&controls=0&loop=1');
         break;
     case 'streamable':
         var link = item.url.replace('/','').substr(item.url.replace('/','').length - 4);
-        $('#video').attr('src', 'https://streamable.com/e/'+link+'?autoplay=1');
+        $('#video').attr('src', 'https://streamable.com/e/'+link+'?autoplay=1&logo=0');
         break;
 }
-
-
-
-
-
-
 
 $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
 $(window).resize(function(){
