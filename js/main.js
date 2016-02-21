@@ -35,6 +35,7 @@ function generateStreamableItem(item){
     var li = [
         '<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">',
             '<img class="img-responsive" src="',preview,'" data-type="',item.type,'" data-link="',link,'">',
+            '<h4>',item.title,'</h4>',
         '</li>'
     ];
     return li.join('');
