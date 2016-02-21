@@ -2,6 +2,7 @@ $(document).ready(function(){
 	$('li img').on('click',function(){
 		var src = $(this).attr('src');
 		var type = $(this).data('type');
+		var link = $(this).data('link');
 
 		switch (type){
 			case 'picture':
@@ -9,9 +10,15 @@ $(document).ready(function(){
 				break;
 			case 'streamable':
 				var string = '<div style="width: 100%; height: 0px; position: relative; padding-bottom: 75.000%;">' +
-								'<iframe src="https://streamable.com/e/w6n4" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen scrolling="no" style="width: 100%; height: 100%; position: absolute;">' +
+								'<iframe src="https://streamable.com/e/'+ link +'" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen scrolling="no" style="width: 100%; height: 100%; position: absolute;">' +
 								'</iframe>' +
 							 '</div>';
+				break;
+			case 'youtube':
+				var string = '<div style="width: 100%; height: 0px; position: relative; padding-bottom: 75.000%;">' +
+						'<iframe src="https://www.youtube.com/embed/'+ link +'" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen scrolling="no" style="width: 100%; height: 100%; position: absolute;">' +
+						'</iframe>' +
+						'</div>';
 				break;
 
 
